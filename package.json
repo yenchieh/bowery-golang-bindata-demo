@@ -1,0 +1,18 @@
+{
+  "name": "go-binary-assets",
+  "version": "1.0.0",
+  "private": true,
+  "main": "pages/js/index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "concurrently -k --prefix \"[{name}]\" --names \"WEBPACK,GO\" -c \"white.bgBlue.bold,white.bgGreen.bold\" \"webpack\" \"make run\""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "html-webpack-plugin": "^4.0.0-beta.8",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.8"
+  },
+  "dependencies": {}
+}
