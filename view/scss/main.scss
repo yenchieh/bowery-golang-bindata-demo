@@ -1,0 +1,93 @@
+@import 'product.scss';
+
+nav {
+  box-shadow: 0 15px 5px -13px rgba(0,0,0,0.57);
+  text-align: center;
+
+  .nav-img {
+    padding: 10px;
+  }
+
+  .nulabLogo {
+    height: 90px;
+  }
+}
+
+
+.products {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+
+  .product {
+    max-width: 200px;
+    margin: 0 22px;
+    padding: 35px;
+    font-size: 18px;
+    color: #6a6a6a;
+    line-height: 28px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+
+    img {
+      max-width: 250px;
+    }
+
+    &__head-line {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    &__description {
+      font-weight: 400;
+    }
+
+    .btn {
+      margin-top: 20px;
+    }
+  }
+}
+
+.btn {
+  font-family: 'proxima-nova', sans-serif;
+  display: inline-block;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color .2s ease 0s;
+  font-size: 14px;
+  padding: 7px 30px;
+
+  &--backlog {
+    background-color: #4cbd9b;
+  }
+
+  &--cacoo {
+    background: #4c7ebf;
+  }
+
+  &--typetalk {
+    background: #ff6455;
+  }
+}
+
+.backIcon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  margin: 15px 0;
+  font-size: 18px;
+  img {
+    max-width: 30px;
+    margin-right: 5px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #6a6a6a;
+}

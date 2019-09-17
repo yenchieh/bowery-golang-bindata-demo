@@ -1,0 +1,56 @@
+.productPage {
+  display: flex;
+  margin-top: 80px;
+  justify-content: center;
+
+  &__left {
+    max-width: 280px;
+  }
+
+  &__right {
+    img {
+      max-width: 400px;
+    }
+  }
+
+  &__description {
+    line-height: 28px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  &__divider {
+    box-sizing: content-box;
+    overflow: visible;
+    clear: both;
+    max-width: 75rem;
+    height: 0;
+    margin: 1.25rem auto;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #cacaca;
+    border-left: 0;
+  }
+
+  .btn {
+    min-width: 135px;
+    font-weight: 400;
+    border-radius: 3px;
+    font-size: 18px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+    text-transform: lowercase;
+    font-family: "Gilroy", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  }
+
+  &.-cacoo {
+    .productPage__right {
+      img {
+        max-width: 600px;
+      }
+    }
+  }
+}
+
+
