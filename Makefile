@@ -11,4 +11,8 @@ generate:
 	go generate
 
 build: generate
-	go build -o build/build *.go
+	GOOS=linux GOARCH=amd64 \
+	go build -o build/binary *.go
+
+build-image: build
+	docker build -t binary-demo:latest .
