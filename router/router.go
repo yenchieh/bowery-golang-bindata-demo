@@ -3,11 +3,11 @@ package router
 import (
 	"errors"
 	"fmt"
-	t "html/template"
+	"html/template"
 	"log"
 	"net/http"
 
-	"github.com/yenchieh/go-binary-assets/template"
+	"github.com/yenchieh/go-binary-assets/tmpl"
 
 	assetfs "github.com/elazarl/go-bindata-assetfs"
 	"github.com/gin-gonic/gin"
@@ -55,16 +55,16 @@ func fs(root string) *assetfs.AssetFS {
 }
 
 func setTemplates(r *gin.Engine, fileNames ...string) error {
-	tmpl := t.New("")
+	t := template.New("")
 	err := errors.New("")
 	for _, fileName := range fileNames {
-		indexBytes := template.MustAsset(fileName)
-		tmpl, err = tmpl.New(fileName).Parse(string(indexBytes))
+		indexBytes := tmpl.MustAsset(fileName)
+		t, err = t.New(fileName).Parse(string(indexBytes))
 		if err != nil {
 			return err
 		}
 	}
-	r.SetHTMLTemplate(tmpl)
+	r.SetHTMLTemplate(t)
 
 	return nil
 }

@@ -4,7 +4,7 @@ dev: dev-bindata
 	go run main.go
 
 dev-bindata:
-	go-bindata -o template/bindata.go -ignore=\\.DS_Store -ignore=\\.gitkeep -debug=1 -pkg template -prefix view/template view/template/...
+	go-bindata -o tmpl/bindata.go -ignore=\\.DS_Store -ignore=\\.gitkeep -debug=1 -pkg tmpl -prefix view/template view/template/...
 	go-bindata -o router/bindata.go -ignore=\\.DS_Store -ignore=\\.gitkeep -debug=1 -pkg router -prefix view/ view/assets/...
 
 generate:
@@ -15,4 +15,7 @@ build: generate
 	go build -o build/binary *.go
 
 build-image: build
-	docker build -t binary-demo:latest .
+	docker build -t yenchieh/bowery-golang-bindata-demo:latest .
+
+push-image: build-image
+	docker push yenchieh/bowery-golang-bindata-demo:latest

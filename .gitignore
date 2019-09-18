@@ -4,3 +4,4 @@ vendor
 build
 bindata.go
 /view/assets
+.DS_Store
